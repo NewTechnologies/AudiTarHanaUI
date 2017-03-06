@@ -1,0 +1,21 @@
+<edmx:Edmx
+    xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+    <edmx:DataServices
+        xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" m:DataServiceVersion="2.0">
+        <Schema
+            xmlns:d="http://schemas.microsoft.com/ado/2007/08/dataservices"
+            xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata"
+            xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ar.com.newtechnologies.auditar.hana.data.services">
+            <EntityType Name="EmpresaType">
+                <Key>
+                    <PropertyRef Name="EMPRESAID"/>
+                </Key>
+                <Property Name="EMPRESAID" Type="Edm.Int64" Nullable="false"/>
+                <Property Name="DESCRIPCION" Type="Edm.String" MaxLength="100"/>
+            </EntityType>
+            <EntityContainer Name="empresas" m:IsDefaultEntityContainer="true">
+                <EntitySet Name="Empresa" EntityType="ar.com.newtechnologies.auditar.hana.data.services.EmpresaType"/>
+            </EntityContainer>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
